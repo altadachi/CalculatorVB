@@ -1,0 +1,205 @@
+Public Class Form1
+
+    Const phi As Single = Math.PI
+    Dim input_angka, Hasil As Double
+    Dim Rumus As String
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        TxtDisplay.Enabled = False
+        btnSatu.Enabled = False
+        btnDua.Enabled = False
+        btnTiga.Enabled = False
+        btnEmpat.Enabled = False
+        btnLima.Enabled = False
+        btnEnam.Enabled = False
+        btnTujuh.Enabled = False
+        btnDelapan.Enabled = False
+        btnSembilan.Enabled = False
+        btnNol.Enabled = False
+        btnAC.Enabled = False
+        btnBagi.Enabled = False
+        btnTambah.Enabled = False
+        btnKurang.Enabled = False
+        btnKali.Enabled = False
+        btnPersen.Enabled = False
+        btnCOS.Enabled = False
+        btnSIN.Enabled = False
+        btnTAN.Enabled = False
+        btnTitik.Enabled = False
+        btnPangkat.Enabled = False
+        btnSMDNG.Enabled = False
+    End Sub
+
+    Private Sub btnNol_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNol.Click
+        TxtDisplay.Text = TxtDisplay.Text & "0"
+    End Sub
+
+    Private Sub btnSatu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSatu.Click
+        TxtDisplay.Text = TxtDisplay.Text & "1"
+    End Sub
+
+    Private Sub btnDua_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDua.Click
+        TxtDisplay.Text = TxtDisplay.Text & "2"
+    End Sub
+
+    Private Sub btnTiga_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTiga.Click
+        TxtDisplay.Text = TxtDisplay.Text & "3"
+    End Sub
+
+    Private Sub btnEmpat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEmpat.Click
+        TxtDisplay.Text = TxtDisplay.Text & "4"
+    End Sub
+
+    Private Sub btnLima_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLima.Click
+        TxtDisplay.Text = TxtDisplay.Text & "5"
+    End Sub
+
+    Private Sub btnEnam_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEnam.Click
+        TxtDisplay.Text = TxtDisplay.Text & "6"
+    End Sub
+
+    Private Sub btnTujuh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTujuh.Click
+        TxtDisplay.Text = TxtDisplay.Text & "7"
+    End Sub
+
+    Private Sub btnDelapan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelapan.Click
+        TxtDisplay.Text = TxtDisplay.Text & "8"
+    End Sub
+
+    Private Sub btnSembilan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSembilan.Click
+        TxtDisplay.Text = TxtDisplay.Text & "9"
+    End Sub
+
+    Private Sub btnTitik_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTitik.Click
+        TxtDisplay.Text = TxtDisplay.Text & ","
+    End Sub
+
+    Private Sub btnAC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAC.Click
+        TxtDisplay.Text = Nothing
+        input_angka = Nothing
+        Hasil = Nothing
+        Rumus = Nothing
+    End Sub
+
+    Private Sub btnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
+        input_angka = Val(TxtDisplay.Text)
+        Rumus = "+"
+        TxtDisplay.Text = Nothing
+
+    End Sub
+
+    Private Sub btnKurang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKurang.Click
+        input_angka = Val(TxtDisplay.Text)
+        Rumus = "-"
+        TxtDisplay.Text = Nothing
+    End Sub
+
+    Private Sub btnKali_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKali.Click
+        input_angka = Val(TxtDisplay.Text)
+        Rumus = "*"
+        TxtDisplay.Text = Nothing
+    End Sub
+
+    Private Sub btnBagi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBagi.Click
+        input_angka = Val(TxtDisplay.Text)
+        Rumus = "/"
+        TxtDisplay.Text = Nothing
+    End Sub
+
+    Private Sub btnPangkat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPangkat.Click
+        input_angka = Val(TxtDisplay.Text)
+        Rumus = "^"
+        TxtDisplay.Text = Nothing
+    End Sub
+
+    Private Sub btnPersen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPersen.Click
+        TxtDisplay.Text = (TxtDisplay.Text) / 100
+
+    End Sub
+
+    
+    Private Sub btnSMDNG_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSMDNG.Click
+        If Rumus = "+" Then
+            TxtDisplay.Text = input_angka + Val(TxtDisplay.Text)
+        ElseIf Rumus = "-" Then
+            TxtDisplay.Text = input_angka - Val(TxtDisplay.Text)
+        ElseIf Rumus = "*" Then
+            TxtDisplay.Text = input_angka * Val(TxtDisplay.Text)
+        ElseIf Rumus = "/" Then
+            TxtDisplay.Text = input_angka / Val(TxtDisplay.Text)
+        ElseIf Rumus = "^" Then
+            TxtDisplay.Text = input_angka ^ Val(TxtDisplay.Text)
+
+        End If
+    End Sub
+
+    Private Sub btnSIN_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSIN.Click
+        TxtDisplay.Text = Math.Sin(TxtDisplay.Text * (phi / 180))
+
+    End Sub
+
+    Private Sub btnCOS_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCOS.Click
+        TxtDisplay.Text = Math.Cos(TxtDisplay.Text * (phi / 180))
+
+    End Sub
+
+    Private Sub btnTAN_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTAN.Click
+        TxtDisplay.Text = Math.Tan(TxtDisplay.Text * (phi / 180))
+    End Sub
+
+
+
+
+    Private Sub btnON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnON.Click
+        TxtDisplay.Enabled = True
+        btnSatu.Enabled = True
+        btnDua.Enabled = True
+        btnTiga.Enabled = True
+        btnEmpat.Enabled = True
+        btnLima.Enabled = True
+        btnEnam.Enabled = True
+        btnTujuh.Enabled = True
+        btnDelapan.Enabled = True
+        btnSembilan.Enabled = True
+        btnNol.Enabled = True
+        btnAC.Enabled = True
+        btnBagi.Enabled = True
+        btnTambah.Enabled = True
+        btnKurang.Enabled = True
+        btnKali.Enabled = True
+        btnPersen.Enabled = True
+        btnCOS.Enabled = True
+        btnSIN.Enabled = True
+        btnTAN.Enabled = True
+        btnTitik.Enabled = True
+        btnPangkat.Enabled = True
+        btnSMDNG.Enabled = True
+
+    End Sub
+
+    Private Sub btnOFF_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOFF.Click
+        TxtDisplay.Enabled = False
+        btnSatu.Enabled = False
+        btnDua.Enabled = False
+        btnTiga.Enabled = False
+        btnEmpat.Enabled = False
+        btnLima.Enabled = False
+        btnEnam.Enabled = False
+        btnTujuh.Enabled = False
+        btnDelapan.Enabled = False
+        btnSembilan.Enabled = False
+        btnNol.Enabled = False
+        btnAC.Enabled = False
+        btnBagi.Enabled = False
+        btnTambah.Enabled = False
+        btnKurang.Enabled = False
+        btnKali.Enabled = False
+        btnPersen.Enabled = False
+        btnCOS.Enabled = False
+        btnSIN.Enabled = False
+        btnTAN.Enabled = False
+        btnTitik.Enabled = False
+        btnPangkat.Enabled = False
+        btnSMDNG.Enabled = False
+    End Sub
+End Class
